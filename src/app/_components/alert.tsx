@@ -9,9 +9,9 @@ type Props = {
 const Alert = ({ preview }: Props) => {
   return (
     <div
-      className={cn("border-b dark:bg-slate-800", {
-        "bg-neutral-800 border-neutral-800 text-white": preview,
-        "bg-neutral-50 border-neutral-200": !preview,
+      className={cn("border-b", {
+        "bg-indigo-900 border-indigo-800 text-white": preview,
+        "bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-slate-800 dark:to-slate-800 border-indigo-100 dark:border-slate-700": !preview,
       })}
     >
       <Container>
@@ -21,7 +21,7 @@ const Alert = ({ preview }: Props) => {
               This page is a preview.{" "}
               <a
                 href="/api/exit-preview"
-                className="underline hover:text-teal-300 duration-200 transition-colors"
+                className="underline hover:text-purple-300 duration-200 transition-colors"
               >
                 Click here
               </a>{" "}
@@ -29,14 +29,13 @@ const Alert = ({ preview }: Props) => {
             </>
           ) : (
             <>
-              The source code for this blog is{" "}
+              Read more technical articles at{" "}
               <a
-                href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-                className="underline hover:text-blue-600 duration-200 transition-colors"
+                href="https://undefinedbehaviorexception.dev"
+                className="font-semibold text-indigo-600 dark:text-indigo-400 hover:underline duration-200 transition-colors"
               >
-                available on GitHub
+                undefinedbehaviorexception.dev
               </a>
-              .
             </>
           )}
         </div>

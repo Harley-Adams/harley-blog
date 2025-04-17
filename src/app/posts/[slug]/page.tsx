@@ -20,11 +20,12 @@ export default async function Post(props: Params) {
   const content = await markdownToHtml(post.content || "");
 
   return (
-    <main>
+    <main className="dark:bg-slate-900">
       <Alert preview={post.preview} />
       <Container>
         <Header />
-        <article className="mb-32">
+        <article className="mb-32 relative">
+          <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 opacity-5 dark:opacity-10 blur-md rounded-lg -z-10"></div>
           <PostHeader
             title={post.title}
             coverImage={post.coverImage}
@@ -52,12 +53,23 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     return notFound();
   }
 
-  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
+  const title = `${post.title} | Undefined Behavior Exception`;
 
   return {
     title,
+    description: post.excerpt,
     openGraph: {
       title,
+      description: post.excerpt,
+      type: 'article',
+      publishedTime: post.date,
+      authors: [post.author.name],
+      images: [post.ogImage.url],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: post.excerpt,
       images: [post.ogImage.url],
     },
   };

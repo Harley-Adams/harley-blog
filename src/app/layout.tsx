@@ -1,17 +1,17 @@
 import Footer from "@/app/_components/footer";
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import cn from "classnames";
 import { ThemeSwitcher } from "./_components/theme-switcher";
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
+  title: `Undefined Behavior Exception | ${CMS_NAME}`,
+  description: `A personal technical blog by ${CMS_NAME} on software engineering, systems programming, and tech.`,
   openGraph: {
     images: [HOME_OG_IMAGE_URL],
   },
@@ -58,7 +58,7 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body
-        className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
+        className={cn(jetbrainsMono.className, "dark:bg-slate-900 dark:text-slate-400")}
       >
         <ThemeSwitcher />
         <div className="min-h-screen">{children}</div>

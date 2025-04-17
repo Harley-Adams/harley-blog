@@ -6,13 +6,41 @@
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  @apply my-6;
+  @apply my-6 dark:text-slate-300;
 }
 
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug;
+  @apply text-3xl mt-12 mb-4 leading-snug font-bold dark:text-slate-200;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug;
+  @apply text-2xl mt-8 mb-4 leading-snug font-bold dark:text-slate-200;
+}
+
+.markdown a {
+  @apply text-indigo-600 dark:text-indigo-400 hover:underline;
+}
+
+.markdown blockquote {
+  @apply border-l-4 border-gray-200 dark:border-slate-700 pl-4 italic text-gray-700 dark:text-slate-400;
+}
+
+.markdown pre {
+  @apply bg-gray-100 dark:bg-slate-800 rounded-lg p-4 overflow-x-auto my-6;
+}
+
+.markdown code {
+  @apply font-mono text-sm dark:text-slate-300;
+}
+
+.markdown ul {
+  @apply list-disc pl-6;
+}
+
+.markdown ol {
+  @apply list-decimal pl-6;
+}
+
+.markdown img {
+  @apply rounded-lg my-8 dark:brightness-90;
 }
