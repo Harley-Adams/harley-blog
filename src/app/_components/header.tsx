@@ -6,6 +6,7 @@ const Header = () => {
       <Link href="/" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">Undefined</span>
         <span className="dark:text-slate-300">Behavior</span>
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">Exception</span>
       </Link>
     </h2>
   );
