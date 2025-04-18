@@ -59,7 +59,7 @@ The Cosmos DB Change Feed would be our savior. We set up change feed processors 
 - Replicate those changes to the new collections with the proper partition structure
 - Maintain a checkpoint of processed documents to ensure nothing was missed
 
-```csharp
+``` csharp
 var builder = new ChangeFeedProcessorBuilder()
     .WithHostName("migration-host")
     .WithFeedCollection(sourceContainer)

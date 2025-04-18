@@ -1,0 +1,124 @@
+/**
+ * Prism.js theme for code syntax highlighting
+ */
+
+/* Code blocks */
+pre[class*="language-"] {
+  color: #d4d4d4;
+  font-size: 13px;
+  text-shadow: none;
+  font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+  background: #2d2d2d;
+  border-radius: 0.3em;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em .3em;
+  border-radius: .3em;
+  color: #db4c69;
+  background: #f9f2f4;
+}
+
+.dark :not(pre) > code[class*="language-"] {
+  background: #1e1e1e;
+  color: #e77;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6a9955;
+}
+
+.token.punctuation {
+  color: #d4d4d4;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #b5cea8;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #ce9178;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #d4d4d4;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #569cd6;
+}
+
+.token.function {
+  color: #dcdcaa;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #d16969;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+/* Line highlighting */
+.line-highlight {
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 3px solid #f7d12e;
+}
+
+/* Line numbers */
+.line-numbers .line-numbers-rows {
+  border-right-color: #404040;
+}
+
+.line-numbers-rows > span:before {
+  color: #858585;
+}
