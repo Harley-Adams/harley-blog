@@ -6,6 +6,7 @@ import cn from "classnames";
 import { ThemeSwitcher } from "./_components/theme-switcher";
 import PrismSetup from "./_components/prism-setup";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react"
 
 import "./globals.css";
 
@@ -58,12 +59,12 @@ export default function RootLayout({
         />
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-        <link 
-          rel="stylesheet" 
-          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" 
-          integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg==" 
-          crossOrigin="anonymous" 
-          referrerPolicy="no-referrer" 
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+          integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
         />
       </head>
       <body
@@ -73,20 +74,21 @@ export default function RootLayout({
         <ThemeSwitcher />
         <div className="min-h-screen">{children}</div>
         <Footer />
-        <Script 
+        <Script
           src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"
           integrity="sha512-9khQRAUBYEJDCDVP2yw3LRUQvjJ0Pjx0EShmaQjcHa6AXiOv6qHQu9lCAIR8O+/D8FtaCoJ2c0Tf9Xo7hYH01Q=="
-          crossOrigin="anonymous" 
+          crossOrigin="anonymous"
           referrerPolicy="no-referrer"
           strategy="afterInteractive"
         />
-        <Script 
+        <Script
           src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"
           integrity="sha512-SkmBfuA2hqjzEVpmnMt/LINrjop3GKWqsuLSSB3e7iBmYK7JuWw4ldmmxwD9mdm2IRTTi0OxSAfEGvgEi0i2Kw=="
-          crossOrigin="anonymous" 
+          crossOrigin="anonymous"
           referrerPolicy="no-referrer"
           strategy="afterInteractive"
         />
+        <Analytics />
       </body>
     </html>
   );
