@@ -13,7 +13,7 @@ export function Intro() {
         <span className="font-bold">
           {CMS_NAME}
         </span>{" "}
-        on software engineering, systems programming, and tech.
+        on software engineering, distributed systems design, and working in big tech.
       </h4>
     </section>
   );
