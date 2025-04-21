@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Undefined Behavior Exception',
   author: 'Harley Adams',
   headerTitle: 'Undefined Behavior Exception',
-  description: `A technical blog on software engineering, distributed systems design, and working in big tech. Don't take me too seriously!`,
+  description: `A technical blog on software engineering, distributed systems design, and working in big tech.`,
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://undefinedbehaviorexception.deb',
@@ -17,7 +17,7 @@ const siteMetadata = {
   // twitter: 'https://twitter.com/Twitter',
   // facebook: 'https://facebook.com',
   // youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com/Harley-Adams',
+  linkedin: 'https://www.linkedin.com/in/HarleyAdams',
   // threads: 'https://www.threads.net',
   // instagram: 'https://www.instagram.com',
   // medium: 'https://medium.com',
