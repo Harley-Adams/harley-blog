@@ -85,12 +85,14 @@ Review for:
 - 5xx errors/request failures
 - Higher latency
 
-When using CosmosDb, look at utilized RU graphs for your containers to validate that costs are as expected. If you have a hot container with not a large amount of data, you should investigate caching to lower cost. 
+When using CosmosDb, look at utilized RU graphs for your containers to validate that costs are as expected. If you have a hot container with not a large amount of data, you should investigate caching to lower cost.
 
 ## But what about 1 BILLION players on a leaderboard?
 
 ![Dr. Evil GIF](/static/images/drevil1billionplayers.gif)
 
 As a fun experiment, let's push the boundaries beyond the player count for any one game and see if we can have a billion entry leaderboard. pushed the boundaries with hypothetical scenarios, simulating massive player bases to observe system behavior and resilience. While extreme, these experiments provide valuable insights into scaling limits and potential optimizations.
+
+Code block showing math.random(0,1000000) on the update API.
 
 Load testing at scale isn't just essential—it's can be very validating of your hard work to see that service fly!
